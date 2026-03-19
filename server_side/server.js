@@ -23,7 +23,39 @@ function validateServerInput(email, password) {
   return ''
 }
 
-app.post('/api/validate-user', (req, res) => {
+function validateDisplayName(displayName) {
+  if (!displayName) {
+    return 'display name cannot be empty'
+  }
+
+  return ''
+}
+
+app.post('/api/register', (req, res) => {
+  const displayName = req.body.displayName ? req.body.displayName.trim() : ''
+  const email = req.body.email ? req.body.email.trim() : ''
+  const password = req.body.password ? req.body.password.trim() : ''
+  const displayNameError = validateDisplayName(displayName)
+  const validationError = validateServerInput(email, password)
+
+  if (displayNameError !== '') {
+    return res.status(400).json({
+      message: displayNameError
+    })
+  }
+
+  if (validationError !== '') {
+    return res.status(400).json({
+      message: validationError
+    })
+  }
+
+  return res.status(200).json({
+    message: 'create account input passed client side and server side validation'
+  })
+})
+
+app.post('/api/login', (req, res) => {
   const email = req.body.email ? req.body.email.trim() : ''
   const password = req.body.password ? req.body.password.trim() : ''
   const validationError = validateServerInput(email, password)
@@ -35,7 +67,7 @@ app.post('/api/validate-user', (req, res) => {
   }
 
   return res.status(200).json({
-    message: 'server side validation passed'
+    message: 'login input passed client side and server side validation'
   })
 })
 
