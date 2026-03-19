@@ -1,4 +1,5 @@
-const welcomeText = document.getElementById('welcomeText')
+// const welcomeText = document.getElementById('welcomeText')
+const welcomeMes = document.getElementById('welcomeText')
 const signOutButton = document.getElementById('signOutButton')
 
 // this puts the saved display name on the page in a safe way
@@ -10,7 +11,10 @@ function loadWelcomeMessage() {
     return
   }
 
-  welcomeText.textContent = 'Hi ' + currentDisplayName
+  // welcomeText.textContent = currentDisplayName
+  // const textContentString = welcomeText.textContent
+  // welcomeText.innerHTML = textContentString;
+  document.getElementById('welcomeText').innerHTML = currentDisplayName;
 }
 
 // this clears the session and goes back to login
