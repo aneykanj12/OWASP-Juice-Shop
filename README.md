@@ -6,18 +6,22 @@ This is my Part 2 Solution for the OWASP Juice Shop Assignment in which I attemp
 
 ## How to Use
 
-1. Begin with running the command:
+1. Begin with running the command in the terminal:
 
     ```git clone https://github.com/aneykanj12/OWASP-Juice-Shop.git``` 
 
-2. Open up the directory in a terminal and run:
+2. Move into the clone directory using this command:
+
+    ```cd OWASP-Juice-Shop```
+
+3. Now move into the backend (server side) directory:
 
     ```cd server_side/```
 
-3. Next install npm if not already installed:
+4. Next install npm if not already installed:
 
     ```npm install```
 
-4. Finally launch the page using the following command and open via localhost when prompted:
+5. Finally launch the page using the following command and open via localhost when prompted:
 
     ```npm start```
