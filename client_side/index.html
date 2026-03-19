@@ -9,21 +9,40 @@
   <body>
     <div class="page-wrapper">
       <div class="login-card">
-        <h1>Login</h1>
-        <p class="subtitle">Sign in to your Juice Shop account</p>
+        <h1>Account Access</h1>
+        <p class="subtitle">Sign in or create an account</p>
 
-        <form id="loginForm">
+        <div class="tab-row">
+          <button id="showLoginButton" class="tab-button active-tab" type="button">Log in</button>
+          <button id="showCreateButton" class="tab-button" type="button">Create account</button>
+        </div>
+
+        <form id="loginForm" class="form-section">
           <div class="input-group">
-            <label for="email">Email</label>
-            <input id="email" type="text" name="email" placeholder="Enter your email">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="text" name="loginEmail" placeholder="Enter your email">
           </div>
 
           <div class="input-group">
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" placeholder="Enter your password">
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" name="loginPassword" placeholder="Enter your password">
           </div>
 
           <button type="submit">Log in</button>
+        </form>
+
+        <form id="createForm" class="form-section hidden-form">
+          <div class="input-group">
+            <label for="createEmail">Email</label>
+            <input id="createEmail" type="text" name="createEmail" placeholder="Create your email">
+          </div>
+
+          <div class="input-group">
+            <label for="createPassword">Password</label>
+            <input id="createPassword" type="password" name="createPassword" placeholder="Create your password">
+          </div>
+
+          <button type="submit">Create account</button>
         </form>
 
         <p id="message"></p>
