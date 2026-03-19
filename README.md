@@ -25,3 +25,7 @@ This is my Part 2 Solution for the OWASP Juice Shop Assignment in which I attemp
 5. Finally launch the page using the following command and open via localhost when prompted:
 
     ```npm start```
+
+## How to Navigate
+
+Upon the website, you will see an option to either sign in or to create an account. The functionality requirements apply to both options but it is encouraged to make an account to fully test the features of the login design. Hope this was helpful.
