@@ -12,7 +12,7 @@ This is my Part 2 Solution for the OWASP Juice Shop Assignment in which I attemp
 
 2. Move into the clone directory using this command:
 
-    ```cd OWASP-Juice-Shop```
+    ```cd OWASP-Juice-Shop/```
 
 3. Now move into the backend (server side) directory:
 
