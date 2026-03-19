@@ -2,48 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Juice Shop Login</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="page-wrapper">
       <div class="login-card">
-        <h1>Account Access</h1>
-        <p class="subtitle">Sign in or create an account</p>
-
         <div class="tab-row">
-          <button id="showLoginButton" class="tab-button active-tab" type="button">Log in</button>
-          <button id="showCreateButton" class="tab-button" type="button">Create account</button>
+          <button id="loginTab" class="tab-button active" type="button">Log in</button>
+          <button id="createTab" class="tab-button" type="button">Create account</button>
         </div>
 
-        <form id="loginForm" class="form-section">
-          <div class="input-group">
-            <label for="loginEmail">Email</label>
-            <input id="loginEmail" type="text" name="loginEmail" placeholder="Enter your email">
-          </div>
+        <div id="loginView">
+          <h1>Login</h1>
+          <p class="subtitle">Sign in to your Juice Shop account</p>
 
-          <div class="input-group">
-            <label for="loginPassword">Password</label>
-            <input id="loginPassword" type="password" name="loginPassword" placeholder="Enter your password">
-          </div>
+          <form id="loginForm">
+            <div class="input-group">
+              <label for="loginEmail">Email</label>
+              <input id="loginEmail" type="text" name="email" placeholder="Enter your email">
+            </div>
 
-          <button type="submit">Log in</button>
-        </form>
+            <div class="input-group">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" type="password" name="password" placeholder="Enter your password">
+            </div>
 
-        <form id="createForm" class="form-section hidden-form">
-          <div class="input-group">
-            <label for="createEmail">Email</label>
-            <input id="createEmail" type="text" name="createEmail" placeholder="Create your email">
-          </div>
+            <button class="main-button" type="submit">Log in</button>
+          </form>
+        </div>
 
-          <div class="input-group">
-            <label for="createPassword">Password</label>
-            <input id="createPassword" type="password" name="createPassword" placeholder="Create your password">
-          </div>
+        <div id="createView" class="hidden">
+          <h1>Create Account</h1>
+          <p class="subtitle">Create a local account for this demo</p>
 
-          <button type="submit">Create account</button>
-        </form>
+          <form id="createForm">
+            <div class="input-group">
+              <label for="createDisplayName">Display Name</label>
+              <input id="createDisplayName" type="text" name="displayName" placeholder="Enter your display name">
+            </div>
+
+            <div class="input-group">
+              <label for="createEmail">Email</label>
+              <input id="createEmail" type="text" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+              <label for="createPassword">Password</label>
+              <input id="createPassword" type="password" name="password" placeholder="Create a password">
+            </div>
+
+            <button class="main-button" type="submit">Create account</button>
+          </form>
+        </div>
 
         <p id="message"></p>
       </div>
