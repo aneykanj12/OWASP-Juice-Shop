@@ -23,7 +23,7 @@ function validateServerInput(email, password) {
   return ''
 }
 
-app.post('/api/login', (req, res) => {
+app.post('/api/validate-user', (req, res) => {
   const email = req.body.email ? req.body.email.trim() : ''
   const password = req.body.password ? req.body.password.trim() : ''
   const validationError = validateServerInput(email, password)
@@ -35,7 +35,7 @@ app.post('/api/login', (req, res) => {
   }
 
   return res.status(200).json({
-    message: 'login input passed client side and server side validation'
+    message: 'server side validation passed'
   })
 })
 
