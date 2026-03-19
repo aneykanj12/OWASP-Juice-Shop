@@ -29,3 +29,7 @@ This is my Part 2 Solution for the OWASP Juice Shop Assignment in which I attemp
 ## How to Navigate
 
 Upon the website, you will see an option to either sign in or to create an account. The functionality requirements apply to both options but it is encouraged to make an account to fully test the features of the login design. Hope this was helpful.
+
+## Part 3 Information
+
+Note that all the above information applies strictly for Part 2. Some additional features of the website is strictly for the purposes of completing Part 3 which is why there is a welcome page for XSS manipulation.
